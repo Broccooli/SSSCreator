@@ -49,8 +49,8 @@ namespace SSSCreator
             btnExport.MouseClick += btnExport_MouseClick;
 
             //Debug values
-            //m_savedFilePath = @"G:\PM Stagelist Starter Pack\Nebulus Stagelist";
-            //txtFilePath.Text = m_savedFilePath;
+            m_savedFilePath = @"G:\Old\PM Stagelist Starter Pack\Nebulus Stagelist";
+            txtFilePath.Text = m_savedFilePath;
         }
 
         #region Private Methods

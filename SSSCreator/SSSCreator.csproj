@@ -78,6 +78,10 @@
     <Compile Include="Constants.cs" />
     <Compile Include="GCTFileException.cs" />
     <Compile Include="GCTFileHandler.cs" />
+    <Compile Include="GlobalStageDirectory.cs" />
+    <Compile Include="IndexedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
