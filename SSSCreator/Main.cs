@@ -16,7 +16,8 @@ namespace SSSCreator
         private String m_savedFilePath;
         private Int32 m_numHidden;
 
-        private List<StageSelectPage> m_pages;
+        private List<Stage> m_pages;
+        private PageGroup m_pageGroup;
 
         GCTFileHandler m_handler;
 
@@ -24,7 +25,9 @@ namespace SSSCreator
         {
             InitializeComponent();
             m_savedFilePath = String.Empty;
-            m_pages = new List<StageSelectPage>(2);
+
+            m_pages = new List<Stage>();
+            m_pageGroup = new PageGroup();
 
             this.Text = "Broccoli's PM SSS Creator";
 
@@ -201,9 +204,13 @@ namespace SSSCreator
                     // If we got this far, the gct file is valid.
                     MessageBox.Show("GCT File loaded successfully", "Load Successful...", MessageBoxButtons.OK);
 
-                    m_pages.Add(new StageSelectPage("Page One", 1, m_handler.PageOneSize, m_handler.PageOneStageList));
-                    m_pages.Add(new StageSelectPage("Page Two", 2, m_handler.PageTwoSize, m_handler.PageTwoStageList));
-                    cmbSelectedPage.DataSource = m_pages;
+                    Page tempOne = new Page(m_handler.PageOneStageList, "Page One");
+                    Page tempTwo = new Page(m_handler.PageTwoStageList, "Page Two");
+
+                    m_pageGroup.Add(tempOne);
+                    m_pageGroup.Add(tempTwo);
+
+                    cmbSelectedPage.DataSource = m_pageGroup;
 
                     ToggleControlVisibility(true);
                 }
@@ -273,13 +280,13 @@ namespace SSSCreator
 
         void cmbSelectedPage_SelectedValueChanged(object sender, EventArgs e)
         {
-            LoadProperComboBoxes();
-            PopulateComboBoxes();
+            //LoadProperComboBoxes();
+            //PopulateComboBoxes();
         }
         void cmbPageSize_SelectedValueChanged(object sender, EventArgs e)
         {
-            LoadProperComboBoxes();
-            PopulateComboBoxes();
+            //LoadProperComboBoxes();
+            //PopulateComboBoxes();
         }
         void btnExport_MouseClick(object sender, MouseEventArgs e)
         {
