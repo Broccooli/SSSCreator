@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SSSCreator
 {
-    static class GlobalStageDirectory
+    public static class GlobalStageDirectory
     {
         #region Stage Values
 
@@ -57,50 +57,50 @@ namespace SSSCreator
 
         #region Stage List
 
-        private static List<Stage> STAGE_LIST = new List<Stage>()
+        public static List<Stage> STAGE_LIST = new List<Stage>()
         {
             new Stage("Battlefield", BATTLEFIELD),
-            new Stage("Final Destination", FINAL_DEST),
-            new Stage("Delfine Plaza", DELFINO),
-            new Stage("Dracula's Castle", DRACULA),
-            new Stage("Metal Cavern", CAVERN),
-            new Stage("Peach's Castle", PEACH_CASTLE),
-            new Stage("Kongo Jungle 64", KONGO64),
-            new Stage("Rumble Falls", RUMBLE_FALLS),
-            new Stage("Pirate Ship", PIRATE_SHIP),
-            new Stage("Hyrule Castle", HYRULE_CASTLE),
+            new Stage("FinalDestination", FINAL_DEST),
+            new Stage("DelfinePlaza", DELFINO),
+            new Stage("DraculasCastle", DRACULA),
+            new Stage("MetalCavern", CAVERN),
+            new Stage("PeachsCastle", PEACH_CASTLE),
+            new Stage("KongoJungle64", KONGO64),
+            new Stage("RumbleFalls", RUMBLE_FALLS),
+            new Stage("PirateShip", PIRATE_SHIP),
+            new Stage("HyruleCastle", HYRULE_CASTLE),
             new Stage("Norfair", NORFAIR),
-            new Stage("Frigate Orpheon", FRIGATE),
-            new Stage("Yoshi's Island", YOSHI_BRAWL),
+            new Stage("FrigateOrpheon", FRIGATE),
+            new Stage("YoshisIsland", YOSHI_BRAWL),
             new Stage("Halberd", HALBERD),
-            new Stage("Lylat Cruise", BAD_STAGE),
-            new Stage("Pokemon Stadium 2", PS2),
-            new Stage("Saffron 64", SAFFRON64),
-            new Stage("Port Town Aero Drive", PTAD),
-            new Stage("Infinite Glacier", INFIN_GLACIER),
-            new Stage("Flat Zone 2", FZ2),
-            new Stage("Castle Seige", CASTLE_SEIGE),
-            new Stage("Warioware Inc.", WW),
-            new Stage("Distant Planet", DP),
+            new Stage("LylatCruise", BAD_STAGE),
+            new Stage("PokemonStadium2", PS2),
+            new Stage("Saffron64", SAFFRON64),
+            new Stage("PortTownAeroDrive", PTAD),
+            new Stage("InfiniteGlacier", INFIN_GLACIER),
+            new Stage("FlatZone2", FZ2),
+            new Stage("CastleSeige", CASTLE_SEIGE),
+            new Stage("WariowareInc", WW),
+            new Stage("DistantPlanet", DP),
             new Stage("Skyworld", SKYWORLD),
-            new Stage("Fountain of Dreams", FOD),
-            new Stage("New Pork City", NPC),
+            new Stage("FountainofDreams", FOD),
+            new Stage("NewPorkCity", NPC),
             new Stage("Smashville", SMASHVILLE),
-            new Stage("Shadow Moses Island", SMI),
-            new Stage("Green Hill Zone", GREEN_HILL),
+            new Stage("ShadowMosesIsland", SMI),
+            new Stage("GreenHillZone", GREEN_HILL),
             new Stage("PictroChat", PICTOCHAT),
             new Stage("Hanenbow", HANENBOW),
             new Stage("Temple", TEMPLE),
-            new Stage("Yoshi's Island", YOSHI_MELEE),
+            new Stage("YoshisIsland", YOSHI_MELEE),
             new Stage("Skyloft", SKYLOFT),
             new Stage("Onett", ONETT),
             new Stage("Dreamland", DREAMLAND),
-            new Stage("Rainbow Cruise", RBCRUISE),
+            new Stage("RainbowCruise", RBCRUISE),
             new Stage("Corneria", CORNERIA),
-            new Stage("Big Blue", BIG_BLUE),
+            new Stage("BigBlue", BIG_BLUE),
             new Stage("Brinstar", BRINSTAR),
-            new Stage("Pokemon Stadium 1", PS1),
-            new Stage("Training Room", TRAINING_ROOM)
+            new Stage("PokemonStadium1", PS1),
+            new Stage("TrainingRoom", TRAINING_ROOM)
         };
 
         private static Dictionary<Int32, Stage> m_valueToStageDict = new Dictionary<Int32, Stage>

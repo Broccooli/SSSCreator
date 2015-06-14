@@ -13,6 +13,57 @@ namespace SSSCreator
 {
     public partial class Main : Form
     {
+        #region Stage Enum
+
+        public enum Stages
+        {
+            Battlefield,
+            FinalDestination,
+            DelfinePlaza,
+            DraculasCastle,
+            MetalCavern,
+            PeachsCastle,
+            KongoJungle64,
+            RumbleFalls,
+            PirateShip,
+            HyruleCastle,
+            Norfair,
+            FrigateOrpheon,
+            YoshisIsland,
+            Halberd,
+            LylatCruise,
+            PokemonStadium2,
+            Saffron64,
+            PortTownAeroDrive,
+            InfiniteGlacier,
+            FlatZone2,
+            CastleSeige,
+            WariowareInc,
+            DistantPlanet,
+            Skyworld,
+            FountainofDreams,
+            NewPorkCity,
+            Smashville,
+            ShadowMosesIsland,
+            GreenHillZone,
+            PictroChat,
+            Hanenbow,
+            Temple,
+            YoshisIsland,
+            Skyloft,
+            Onett,
+            Dreamland,
+            RainbowCruise,
+            Corneria,
+            BigBlue,
+            Brinstar,
+            PokemonStadium1,
+            TrainingRoom
+        }
+
+        #endregion
+
+
         private String m_savedFilePath;
         private Int32 m_numHidden;
 
@@ -150,7 +201,7 @@ namespace SSSCreator
             for (Int32 ii = 1; ii <= Constants.MAX_STAGES_PAGE_TWO; ii++)
             {
                 ComboBox temp = grpbxPageProperties.Controls["cmbStage" + ii] as ComboBox;
-                temp.DataSource = new List<Stage>(Constants.STAGE_LIST.AsEnumerable<Stage>());
+                temp.DataSource = Enum.GetValues(typeof(Stages));
             }
 
             cmbPageSize.DataSource = Constants.POSSIBLE_STAGE_SIZES;

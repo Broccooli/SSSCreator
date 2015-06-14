@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SSSCreator
 {
-    class Stage : IEquatable<Stage>
+    public class Stage : IEquatable<Stage>
     {
         public String Name { get; private set; }
         public Int32 Value { get; private set; }
